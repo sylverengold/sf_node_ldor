@@ -1,0 +1,27 @@
+<%- include('header1') %>
+
+<div class="ui comments">
+<h3 class="ui dividing header">Commentaires</h3>
+
+<% if (locals.message.id != undefined) {%>
+	<div class="comment">
+<a class="avatar" href="/message/<%= message.id %>">
+<img src=<%= message.avatar %>>
+</a>	
+		<div class="content">
+			<div class="metadata">
+				<div class="date">
+					<%= message.created_at %> - <%= message.created_atFromNow %>
+				</div>
+			</div>
+			<div class="text">
+				<%= message.content %>
+			</div>
+		</div>
+	</div>
+	<% } %>
+</div>
+
+
+<%- include('footer1') %>
+

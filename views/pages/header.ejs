@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ldor SF</title>
+<link rel="stylesheet" href="/semantic/semantic.min.css">
+</head>
+<body>
+	<div class="ui fixed inverted menu">
+		<a href="/" class="header item">Accueil</a>
+	</div>
+		<h1>Welcome</h1>
+		<!-- avec locals.variable permet de tester la presance d'une variable-->
+		<% if (locals.test) {%><p><%= test %></p><% } %>
+<div class="ui lain container">
+	<% if (locals.error) {%>
+		<div class="ui negative message"><%= error %></div>
+	<% } %>

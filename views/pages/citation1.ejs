@@ -1,0 +1,26 @@
+<%- include('header1') %>
+
+<div class="ui comments">
+<h3 class="ui dividing header">Citations</h3>
+<% if (locals.nbLines != undefined) {%>
+<h3 class="ui dividing header">Nombre de lignes : <%= nbLines %></h3>
+<% } %>
+<% for(citation of citations) { %>
+	<div class="comment">	
+		<div class="content">
+			<div class="text">
+				<%= citation.content %>
+			</div>
+			<div class="label">
+				<a   href="/citations/<%= citation.id_a %>"><%= citation.firstname %>  <%= citation.lastname %></a>
+			</div>
+		</div>
+	</div>
+<% } %>
+</div>
+			<div class="label">
+				<a   href="/citations">Toutes les citations</a>
+			</div>
+
+<%- include('footer1') %>
+
